@@ -10,9 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_21_193603) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_22_042329) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
+  create_table "carts_sneakers", force: :cascade do |t|
+    t.bigint "cart_id", null: false
+    t.bigint "sneaker_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_carts_sneakers_on_cart_id"
+    t.index ["sneaker_id"], name: "index_carts_sneakers_on_sneaker_id"
+  end
+
+  create_table "sneakers", force: :cascade do |t|
+    t.string "name"
+    t.integer "gender"
+    t.string "image"
+    t.float "price"
+    t.integer "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -23,4 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_193603) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "carts", "users"
+  add_foreign_key "carts_sneakers", "carts"
+  add_foreign_key "carts_sneakers", "sneakers"
 end
