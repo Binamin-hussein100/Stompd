@@ -13,4 +13,9 @@ class SessionsController < ApplicationController
         session[:user_id] = nil
         render json: {message: 'Successfully Logged in'}
     end
+
+    private
+    def session_params
+        params.require(:session).permit(:eamil, :password)
+    end
 end
