@@ -8,6 +8,13 @@ class UsersController < ApplicationController
         end
     end
 
+    def index
+        @sneakers = User.all
+    
+        render json: @sneakers
+      end
+    
+
     private
     def user_params
         params.require(:user).permit(:email, :password)
