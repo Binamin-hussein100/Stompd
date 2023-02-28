@@ -2,7 +2,9 @@ class SessionsController < ApplicationController
     def create
         user = User.find_by(email: params[:email])
         if user && user.authenticate(params[:password])
+            
             token = JWT.encode({user_id: user.id},Rails.application.secrets.secret_key_base)
+            pp token
             render json: {token: token}
         else
             render json: {error: "Invalid password or password"}, status: :unprocessable_entity
