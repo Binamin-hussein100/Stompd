@@ -10,8 +10,8 @@ Rails.application.routes.draw do
       resources :users
       resources :sneakers
 
-      post 'signup', to: 'users#create'
-      post 'login', to: 'sessions#create'
+      # post 'signup', to: 'users#create'
+      # post 'login', to: 'sessions#create'
       post 'authenticate', to: 'authentication#create'
     end
   end
