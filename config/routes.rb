@@ -7,12 +7,15 @@ Rails.application.routes.draw do
       resources :orders
       resources :cart_sneakers
       resources :carts
-      resources :users
+      resources :users, only: [:index, :create, :show, :update, :destroy]
       resources :sneakers
 
       # post 'signup', to: 'users#create'
       # post 'login', to: 'sessions#create'
       post '/authenticate', to: 'authentication#create'
+
+      #user
+      get '/users', to: 'users#index'
     end
   end
 end
