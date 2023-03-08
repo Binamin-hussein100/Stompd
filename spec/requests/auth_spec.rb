@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Authentication', type: :request do
   before do 
-    @user = User.create(username: 'Binamin')
+    @user = User.create(username: 'Binamin', password: 'Password1')
   end
   describe 'POST /authenticate' do
 
@@ -13,7 +13,7 @@ describe 'Authentication', type: :request do
       expect(response.content_type).to eq('application/json; charset=utf-8')
       response_body = JSON.parse(response.body)
       expect(response_body).to eq({
-        'token' => 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.DiPWrOKsx3sPeVClrm_j07XNdSYHgBa3Qctosdxax3w'
+        'token' => 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0OX0.HylQWLPyl7u8Xtcd8Lfq1fLMx_JrGG36nDzRr-7R07E'
       })
     end
 
