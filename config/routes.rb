@@ -14,8 +14,11 @@ Rails.application.routes.draw do
       # post 'login', to: 'sessions#create'
       post '/authenticate', to: 'authentication#create'
 
-      #user
+      #USER
       get '/users', to: 'users#index'
+
+      # CARTS
+      post '/carts', to: 'carts#create'
     end
   end
 end

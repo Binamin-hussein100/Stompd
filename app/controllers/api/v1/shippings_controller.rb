@@ -1,4 +1,4 @@
-class ShippingsController < ApplicationController
+class Api::V1::ShippingsController < ApplicationController
   before_action :set_shipping, only: %i[ show update destroy ]
 
   # GET /shippings

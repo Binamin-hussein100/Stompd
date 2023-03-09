@@ -101,4 +101,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_064830) do
   add_foreign_key "payments", "orders"
   add_foreign_key "payments", "users"
   add_foreign_key "shippings", "orders"
-end
+1end

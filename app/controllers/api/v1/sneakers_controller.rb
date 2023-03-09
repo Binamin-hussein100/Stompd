@@ -1,4 +1,4 @@
-class SneakersController < ApplicationController
+class Api::V1::SneakersController < ApplicationController
   before_action :set_sneaker, only: %i[ show update destroy ]
 
   # GET /sneakers
@@ -19,6 +19,7 @@ class SneakersController < ApplicationController
 
     if @sneaker.save
       render json: @sneaker, status: :created, location: @sneaker
+      redirect_to resource_path(@sneaker), notice: "Sneaker saved successfully"
     else
       render json: @sneaker.errors, status: :unprocessable_entity
     end
