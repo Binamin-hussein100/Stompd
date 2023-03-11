@@ -13,7 +13,7 @@ describe 'Authentication', type: :request do
       expect(response.content_type).to eq('application/json; charset=utf-8')
       response_body = JSON.parse(response.body)
       expect(response_body).to eq({
-        'token' => 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0OX0.HylQWLPyl7u8Xtcd8Lfq1fLMx_JrGG36nDzRr-7R07E'
+        'token' => 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1fQ.YdUeKzPfpTFVgbh0nu3t0s4Z-zIHA6ocRV1sww29flg'
       })
     end
 
