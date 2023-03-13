@@ -7,7 +7,7 @@ import Logo from '../src/Assets/sneakers/logo2.png'
 function App() {
   return (
     <>
-      <div className='px-10 h-screen'>
+      <div className='px-20 h-screen'>
           <div className='font-bold max-width-[800px] '>
             <img className='mx-auto w-[10%] h-20' src={Logo}  />
           </div>
