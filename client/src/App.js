@@ -3,6 +3,8 @@ import './App.css';
 import LandingPage from './components/landingpage';
 import Navbar from './components/navbar';
 import Logo from '../src/Assets/sneakers/logo2.png'
+import { Routes, Route, Link } from "react-router-dom";
+
 
 function App() {
   return (
