@@ -1,18 +1,21 @@
 import React from 'react';
 import {AiOutlineClose, AiOutlineMenu, AiOutlineSearch, AiOutlineShoppingCart, AiOutlineUser} from 'react-icons/ai'
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return(
         <>
             <div className='container px-10 mt-5'>
+                
                 <div className='flex justify-between'>
                     <div>
                         <AiOutlineSearch/>
                     </div>
                     <div >
                         <ul className='flex'>
-                            <li className='px-4 font-bold'>MEN</li>
+                            <Link to='/signin'>
+                                <li className='px-4 font-bold'>MEN</li>
+                            </Link>
                             <li className='px-4 font-bold'>WOMEN</li>
                             <li className='px-4 font-bold'>YOUTH</li>
                             <li className='px-4 font-bold'>FEATURED</li>
