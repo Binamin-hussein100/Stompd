@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import Logo from '../src/Assets/sneakers/logo2.png'
 import {BrowserRouter,Switch, Route} from "react-router-dom"
 import SignIn from './components/signin';
+import Signup from './components/signup';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
                     <LandingPage />
                 </Route>
                 <Route exact path='/signin' >
-                    <SignIn />
+                    <Signup />
                 </Route>
                 
             </Switch>
