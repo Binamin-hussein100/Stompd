@@ -6,6 +6,7 @@ import Logo from '../src/Assets/sneakers/logo2.png'
 import {BrowserRouter,Switch, Route} from "react-router-dom"
 import SignIn from './components/signin';
 import Signup from './components/signup';
+import Shop from './components/shop';
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
                 <Route exact path='/signin' >
                     <Signup />
                 </Route>
-                
+                <Route exact path='/shop' >
+                    <Shop />
+                </Route>
             </Switch>
           </BrowserRouter>
             
