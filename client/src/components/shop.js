@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 import {AiOutlineSearch} from 'react-icons/ai'
 import axios from 'axios';
+import wave from "../Assets/sneakers/wave.png"
+
 
 
 const Shop = () =>{
@@ -65,9 +67,9 @@ const Shop = () =>{
 
             </div>
             <div className='flex border'>
-                <div className='w-[20%] border border-solid'>
+                <div className='w-[20%] '>
                     
-                    <div className='border border-solid p-10 bg-blue-100'>
+                    <div className=' p-10 '>
                         <h1 className='text-4xl font-semibold italic mb-5'>FILTER</h1>
                         <div className="relative inline-block text-left w-full" >
                         <button
@@ -176,8 +178,8 @@ const Shop = () =>{
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div className='w-full border'>
+                    <div className='border w-[30%]'>
                     {/* <ul>
                         {filterProducts(products, selectedFilter).map(product => (
                         <li key={product.id}>
@@ -185,8 +187,20 @@ const Shop = () =>{
                         </li>
                         ))}
                     </ul> */}
-                        <div>
-                            
+                        <div className='p-10'>
+                            {/* name */}
+                            <h3>Nike</h3>
+                            {/* gender */}
+                            <p>Youth</p>
+                            {/* image */}
+                            <img src={wave} className=""/>
+                            <div className='flex justify-between'>
+                                <div >
+                                    <h3>Sizes</h3>
+                                    <p>6,7,9,</p>
+                                </div>
+                                <h3>$110</h3>    
+                            </div>
                         </div>
 
                     </div>
